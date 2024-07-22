@@ -6,7 +6,8 @@ dart --version
 ```
 # INSTALL Cocoapod
 
-# INSTALL FLUTTER (https://docs.flutter.dev/get-started/install/macos/mobile-ios)
+# INSTALL FLUTTER 
+### [https://docs.flutter.dev/get-started/install/macos/mobile-ios](https://docs.flutter.dev/get-started/install/macos/mobile-ios)
 ```
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.22.3-stable.zip
 mkdir ~/work && mv flutter_macos_arm64_3.22.3-stable.zip && cd ~/work
@@ -16,9 +17,13 @@ source ~/.bash_profile
 flutter doctor -v
 ```
 # CREATE FLUTTER PROJECT and SETUP IT USE WITH MELOS
-`mkdir monorepo/{packages,apps} -p`
+```
+mkdir monorepo/{packages,apps} -p
+```
 ## Step 1: Create a New Flutter Project
-`cd monorepo/apps && flutter create melos_app`
+```
+cd monorepo/apps && flutter create melos_app
+```
 ## Step 2: Set Up Melos
 * ### Initial Melos
 ```
@@ -45,26 +50,33 @@ dependencies:
   melos_dependency: ^0.0.1
 ```
 ## Step 3: Install Melos for flutter
-`flutter pub global activate melos`
+```
+flutter pub global activate melos
+```
 * ### Ensure Global Binaries Are in Your Path. Add Flutter global binaries directory to your PATH
-`
+```
 vim ~/.bash_profile -> export PATH="$PATH":"$HOME/.pub-cache/bin"
 source ~/.bash_profile
-`
+```
 * ### Verify Melos Installation
-`melos --version`
+```
+melos --version
+```
 
 ## Step 3: INSTALL MELOS for Dart
 * ### Active melos globally
-`dart pub global activate melos`
+```
+dart pub global activate melos
+```
 * ### Ensure Global Binaries Are in Your Path. Add Dart’s global binaries directory to your PATH
 ```
 vim ~/.bash_profile -> export PATH="$PATH":"$HOME/.pub-cache/bin"
 source ~/.bash_profile
 ```
 * ### Verify Melos Installation
-```melos --version```
-
+```
+melos --version
+```
 ## Step 4: SETUP A WORKSPACE
 * ### Melos is designed to work with a workspace. A workspace is a directory which contains all the packages that are going to be developed together. Its root directory must contain a melos.yaml and a pubspec.yaml file.
 * ### The following is the recommended workspace directory structure
@@ -113,7 +125,9 @@ scripts:
     description: Run `dart format` for all packages
 ```
 * ### BOOTSTRAPPING the Workspace (Bootstrap command look for pubspec.yaml then they try to connect all those packages together (locally connected) = which installs dependencies for all packages and sets up symlinks)
-```melos bootstrap```
+```
+melos bootstrap
+```
 
 ## Step 5: Usage of Melos
 
