@@ -80,7 +80,7 @@ source ~/.bash_profile
 melos --version
 ```
 ## Step 4: SETUP A WORKSPACE
-#### Melos is designed to work with a workspace. A workspace is a directory which contains all the packages that are going to be developed together. Its root directory must contain a melos.yaml and a pubspec.yaml file.
+#### *Melos is designed to work with a workspace. A workspace is a directory which contains all the packages that are going to be developed together. Its root directory must contain a melos.yaml and a pubspec.yaml file.*
 * ### The following is the recommended workspace directory structure
 ```
 my_project
@@ -127,7 +127,7 @@ scripts:
     description: Run `dart format` for all packages
 ```
 * ### BOOTSTRAPPING the Workspace 
-#### Bootstrap command look for pubspec.yaml then they try to connect all those packages together (locally connected) = which installs dependencies for all packages and sets up symlinks
+#### *Bootstrap command look for pubspec.yaml then they try to connect all those packages together (locally connected) = which installs dependencies for all packages and sets up symlinks*
 ```
 melos bootstrap
 ```
