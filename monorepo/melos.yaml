@@ -1,0 +1,17 @@
+name: MelosPresentation
+
+packages:
+  - apps/**
+  - packages/**
+
+command:
+  verion:
+    # Only allow versioning to happen on main brach
+    branch: main
+    # Generates a link to a prefilled GitHub release creation page
+    releaseUrl: true
+
+scripts:
+  format:
+    run: melos exec dart format . --fix
+    description: Run `dart format` for all packages
