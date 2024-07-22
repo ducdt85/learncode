@@ -128,8 +128,12 @@ scripts:
 ```
 * ### BOOTSTRAPPING the Workspace 
 #### *Bootstrap command look for pubspec.yaml then they try to connect all those packages together (locally connected) = which installs dependencies for all packages and sets up symlinks*
+#### *Bootstrapping has 2 primary roles:*
+* ##### *Installing all package dependencies (internally using pub get).*
+* ##### *Locally linking any packages together*
 ```
 melos bootstrap
+melos list
 ```
 
 ## Step 5: Usage of Melos
