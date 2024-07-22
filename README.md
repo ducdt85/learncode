@@ -7,7 +7,7 @@ dart --version
 # INSTALL Cocoapod
 
 # INSTALL FLUTTER 
-### [https://docs.flutter.dev/get-started/install/macos/mobile-ios](https://docs.flutter.dev/get-started/install/macos/mobile-ios)
+#### [https://docs.flutter.dev/get-started/install/macos/mobile-ios](https://docs.flutter.dev/get-started/install/macos/mobile-ios)
 ```
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.22.3-stable.zip
 mkdir ~/work && mv flutter_macos_arm64_3.22.3-stable.zip && cd ~/work
@@ -33,7 +33,9 @@ packages:
   - packages/**
 ```  
 + ### Create the Flutter Sample Package with the name melos_dependency.
-`cd monorepo/packages && flutter create -t package melos_dependency`
+```
+cd monorepo/packages && flutter create -t package melos_dependency
+```
 - ### Get version package melos_dependency
 ```
 cat monorepo/packages/melos_dependency/pubspec.yaml 
@@ -78,7 +80,7 @@ source ~/.bash_profile
 melos --version
 ```
 ## Step 4: SETUP A WORKSPACE
-* ### Melos is designed to work with a workspace. A workspace is a directory which contains all the packages that are going to be developed together. Its root directory must contain a melos.yaml and a pubspec.yaml file.
+#### Melos is designed to work with a workspace. A workspace is a directory which contains all the packages that are going to be developed together. Its root directory must contain a melos.yaml and a pubspec.yaml file.
 * ### The following is the recommended workspace directory structure
 ```
 my_project
@@ -124,7 +126,8 @@ scripts:
     run: melos exec dart format . --fix
     description: Run `dart format` for all packages
 ```
-* ### BOOTSTRAPPING the Workspace (Bootstrap command look for pubspec.yaml then they try to connect all those packages together (locally connected) = which installs dependencies for all packages and sets up symlinks)
+* ### BOOTSTRAPPING the Workspace 
+#### Bootstrap command look for pubspec.yaml then they try to connect all those packages together (locally connected) = which installs dependencies for all packages and sets up symlinks
 ```
 melos bootstrap
 ```
