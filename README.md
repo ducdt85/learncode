@@ -36,7 +36,7 @@ name: melos_dependency
 description: "A new Flutter package project."
 version: 0.0.1
 ```
-### *Declare dependencies package to flutter app 
+* ### Declare dependencies package to flutter app 
 ```
 vim monorepo/apps/melos_app/pubsec.yaml
 dependencies:
@@ -46,28 +46,28 @@ dependencies:
 ```
 ## Step 3: Install Melos for flutter
 `flutter pub global activate melos`
-### *Ensure Global Binaries Are in Your Path. Add Flutter global binaries directory to your PATH
+* ### Ensure Global Binaries Are in Your Path. Add Flutter global binaries directory to your PATH
 `
 vim ~/.bash_profile -> export PATH="$PATH":"$HOME/.pub-cache/bin"
 source ~/.bash_profile
 `
-### *Verify Melos Installation
+* ### Verify Melos Installation
 `melos --version`
 
 ## Step 3: INSTALL MELOS for Dart
-### *Active melos globally
+* ### Active melos globally
 `dart pub global activate melos`
-### *Ensure Global Binaries Are in Your Path. Add Dart’s global binaries directory to your PATH
+* ### Ensure Global Binaries Are in Your Path. Add Dart’s global binaries directory to your PATH
 ```
 vim ~/.bash_profile -> export PATH="$PATH":"$HOME/.pub-cache/bin"
 source ~/.bash_profile
 ```
-### *Verify Melos Installation
+* ### Verify Melos Installation
 ```melos --version```
 
 ## Step 4: SETUP A WORKSPACE
-### *Melos is designed to work with a workspace. A workspace is a directory which contains all the packages that are going to be developed together. Its root directory must contain a melos.yaml and a pubspec.yaml file.
-### *The following is the recommended workspace directory structure
+* ### Melos is designed to work with a workspace. A workspace is a directory which contains all the packages that are going to be developed together. Its root directory must contain a melos.yaml and a pubspec.yaml file.
+* ### The following is the recommended workspace directory structure
 ```
 my_project
 ├── apps
@@ -80,7 +80,7 @@ my_project
 ├── pubspec.yaml
 └── README.md
 ```
-### *Install Melos in the workspace
+* ### Install Melos in the workspace
 ```
 vim monorepo/pubspec.yaml
 name: melos_presentation_workspace
@@ -91,7 +91,7 @@ environment:
 dev_dependencies:
   melos: ^3.0.0
 ```
-### *Configure the workspace  
+* ### Configure the workspace  
 ```
 vim monorepo/melos.yaml
 name: MelosPresentation
@@ -112,7 +112,7 @@ scripts:
     run: melos exec dart format . --fix
     description: Run `dart format` for all packages
 ```
-### *BOOTSTRAPPING the Workspace (Bootstrap command look for pubspec.yaml then they try to connect all those packages together (locally connected) = which installs dependencies for all packages and sets up symlinks)
+* ### BOOTSTRAPPING the Workspace (Bootstrap command look for pubspec.yaml then they try to connect all those packages together (locally connected) = which installs dependencies for all packages and sets up symlinks)
 ```melos bootstrap```
 
 ## Step 5: Usage of Melos
