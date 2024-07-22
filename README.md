@@ -20,16 +20,16 @@ flutter doctor -v
 ## Step 1: Create a New Flutter Project
 `cd monorepo/apps && flutter create melos_app`
 ## Step 2: Set Up Melos
-### *Initial Melos
+* ### Initial Melos
 ```
 cd melos_app && vim melos.yaml
 name: melos_app
 packages:
   - packages/**
 ```  
-### Create the Flutter Sample Package with the name melos_dependency.
++ ### Create the Flutter Sample Package with the name melos_dependency.
 `cd monorepo/packages && flutter create -t package melos_dependency`
-### *Get version package melos_dependency
+- ### Get version package melos_dependency
 ```
 cat monorepo/packages/melos_dependency/pubspec.yaml 
 name: melos_dependency
